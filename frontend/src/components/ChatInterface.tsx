@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Send, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
+import { Send, Mic, MicOff, Volume2, VolumeX, ArrowLeft } from 'lucide-react';
 import { useAIChat } from '../hooks/useQueries';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
@@ -15,7 +15,11 @@ interface Message {
   timestamp: Date;
 }
 
-export default function ChatInterface() {
+interface ChatInterfaceProps {
+  onBack: () => void;
+}
+
+export default function ChatInterface({ onBack }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -142,6 +146,9 @@ export default function ChatInterface() {
         <CardHeader className="border-b bg-gradient-to-r from-chart-1/10 to-chart-2/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
+              <Button variant="ghost" size="icon" onClick={onBack} className="mr-2">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
               <Avatar className="h-10 w-10 border-2 border-chart-1">
                 <AvatarImage src="/assets/generated/ai-avatar.dim_200x200.png" />
                 <AvatarFallback className="bg-gradient-to-br from-chart-1 to-chart-2 text-white">AI</AvatarFallback>

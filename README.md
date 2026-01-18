@@ -1,11 +1,9 @@
-# autobiz-ai-business-intelligence-chatbot
 # AutoBiz AI - Business Intelligence Chatbot
 
 AutoBiz AI is a modern, privacy-focused business intelligence dashboard and chatbot integrated with **Google Gemini**. It allows users to track stock market trends, visualize business metrics, and analyze financial data through a natural language interface.
 
 ![AutoBiz Dashboard](https://github.com/HNS-06/autobiz-ai-business-intelligence-chatbot/raw/main/screenshots/dashboard.png)
 *(Note: Add a screenshot of your dashboard to a `screenshots` folder to make this link work, or update the URL)*
-
 ## 🚀 Features
 
 -   **AI-Powered Analyst**: Integrated with Google Gemini (Pro/Flash) to answer queries about stocks, markets, and business strategies.

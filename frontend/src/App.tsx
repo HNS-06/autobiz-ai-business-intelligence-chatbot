@@ -16,7 +16,7 @@ function AppContent() {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-accent/5">
       <Header onChatToggle={() => setShowChat(!showChat)} />
       <main className="flex-1 container mx-auto px-4 py-8">
-        {showChat ? <ChatInterface /> : <Dashboard />}
+        {showChat ? <ChatInterface onBack={() => setShowChat(false)} /> : <Dashboard />}
       </main>
       <Footer />
       <Toaster />
