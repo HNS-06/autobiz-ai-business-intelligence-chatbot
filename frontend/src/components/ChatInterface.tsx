@@ -146,7 +146,7 @@ export default function ChatInterface({ onBack }: ChatInterfaceProps) {
         <CardHeader className="border-b bg-gradient-to-r from-chart-1/10 to-chart-2/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" onClick={onBack} className="mr-2">
+              <Button variant="ghost" size="icon" onClick={onBack} className="mr-2" title="Back to Dashboard">
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <Avatar className="h-10 w-10 border-2 border-chart-1">
